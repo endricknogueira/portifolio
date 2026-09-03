@@ -1,0 +1,146 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(139, 92, 246, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.1), transparent 35%),
+    #0b1120;
+  color: #f8fafc;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero-greeting {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero h2 {
+  margin: 1.5rem 0 0;
+  color: #e2e8f0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 1.5rem auto 0;
+  color: #94a3b8;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* BOTÕES */
+.hero-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px !important;
+  border: 1px solid transparent !important;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+/* BOTÃO PRINCIPAL */
+.hero-button-primary {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4) !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
+}
+
+.hero-button-primary:hover {
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4) !important;
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.hero-button-secondary {
+  color: #e2e8f0 !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: #334155 !important;
+}
+
+.hero-button-secondary:hover {
+  color: #f8fafc !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #64748b !important;
+}
+
+/* ÍCONE DO GITHUB */
+.hero-button-secondary .pi {
+  font-size: 1.1rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

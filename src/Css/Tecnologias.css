@@ -1,0 +1,228 @@
+.technologies {
+  position: relative;
+  width: 100%;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(139, 92, 246, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(circle at 15% 80%, rgba(6, 182, 212, 0.06), transparent 30%);
+}
+
+.technologies-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CABEÇALHO */
+.technologies-header {
+  max-width: 750px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.technologies-header .section-label {
+  margin-bottom: 1.2rem;
+}
+
+.technologies-header h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.technologies-header h2 span {
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.technologies-header p {
+  max-width: 650px;
+  margin: 1.5rem auto 0;
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* GRUPOS DE TECNOLOGIAS */
+.technology-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.technology-group {
+  position: relative;
+  width: 100%;
+}
+
+/* TÍTULO DO GRUPO */
+.technology-group h3 {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  margin: 0 auto -0.75rem;
+  padding: 0 1.5rem;
+  color: #e2e8f0;
+  background: #0b1120;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* CARD PRINCIPAL */
+.technology-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.technology-card:hover {
+  border-color: rgba(139, 92, 246, 0.2);
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25),
+    0 0 40px rgba(139, 92, 246, 0.04);
+}
+
+/* PEQUENO CARD DA TECNOLOGIA */
+.technology-item {
+  width: 120px;
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  cursor: default;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* EFEITO ZOOM */
+.technology-item:hover {
+  transform: scale(1.06);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.2),
+    0 0 25px rgba(139, 92, 246, 0.08);
+}
+
+/* LOGOS */
+.technology-item > i {
+  font-size: 2.8rem;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.technology-item:hover > i {
+  transform: scale(1.08);
+}
+
+.technology-item .devicon-github-original {
+  color: #f8fafc;
+}
+
+/* ÍCONES SEM LOGO ESPECÍFICA */
+.technology-fallback-icon {
+  color: #8b5cf6;
+  font-size: 2.5rem !important;
+}
+
+/* NOME DA TECNOLOGIA */
+.technology-item span {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.technology-item:hover span {
+  color: #f8fafc;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+  .technology-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .technologies {
+    padding: 5rem 1.5rem;
+  }
+
+  .technologies-header {
+    margin-bottom: 4rem;
+  }
+
+  .technology-groups {
+    gap: 3rem;
+  }
+
+  .technology-card {
+    padding: 1.25rem;
+  }
+
+  .technology-item {
+    min-height: 115px;
+  }
+}
+
+@media (max-width: 400px) {
+  .technologies {
+    padding: 5rem 1rem;
+  }
+
+  .technology-card {
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .technology-item {
+    min-height: 105px;
+
+    padding: 0.75rem;
+  }
+
+  .technology-item > i {
+    font-size: 2.3rem;
+  }
+
+  .technology-item span {
+    font-size: 0.78rem;
+  }
+}
