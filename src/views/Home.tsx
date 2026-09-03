@@ -101,9 +101,7 @@ function Home() {
 
   const nextProject = () => {
     if (isAnimating) return;
-
     setIsAnimating(true);
-
     setCurrentSlide((current) =>
       current === projects.length - 1 ? 0 : current + 1,
     );
@@ -111,9 +109,7 @@ function Home() {
 
   const previousProject = () => {
     if (isAnimating) return;
-
     setIsAnimating(true);
-
     setCurrentSlide((current) =>
       current === 0 ? projects.length - 1 : current - 1,
     );
@@ -121,7 +117,6 @@ function Home() {
 
   const goToProject = (index: number) => {
     if (isAnimating || index === currentSlide) return;
-
     setIsAnimating(true);
     setCurrentSlide(index);
   };
@@ -160,14 +155,14 @@ function Home() {
               className="hero-button hero-button-secondary"
               onClick={() =>
                 window.open(
-                  "https://github.com/",
+                  "https://www.linkedin.com/in/endricknogueira/",
                   "_blank",
                   "noopener,noreferrer",
                 )
               }
             >
-              <i className="pi pi-github"></i>
-              <span>GitHub</span>
+              <i className="pi pi-linkedin"></i>
+              <span>LinkedIn</span>
             </Button>
           </div>
         </div>
