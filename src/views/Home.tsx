@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "primereact/button";
 import fotoPerfil from "../assets/perfil.jpeg";
+import imagemQrCode from "../assets/projetos/qrcode.png";
 import "../Css/Home.css";
 import "../Css/SobreMim.css";
 import "../Css/Tecnologias.css";
@@ -25,7 +26,7 @@ const projects: Project[] = [
     name: "QR Code para Contatos",
     description:
       "Sistema web para geração de QR Codes de contatos, permitindo informar dados pessoais e gerar um código para compartilhamento.",
-    image: "../../public/qrcodelinkedin.png",
+    image: imagemQrCode,
     url: "https://qrcode-contato.vercel.app/",
     technologies: [
       {
