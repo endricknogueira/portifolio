@@ -608,6 +608,7 @@
   }
 
   .project-image-wrapper {
+    width: 190px;
     height: 190px;
   }
 
@@ -672,7 +673,8 @@
   }
 
   .project-image-wrapper {
-    height: 165px;
+    width: 200px;
+    height: 200px;
   }
 
   .project-card-content {
