@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "primereact/button";
 import fotoPerfil from "../assets/perfil.jpeg";
 import imagemQrCode from "../assets/projetos/qrcode.png";
+import imagemConsultaTempo from "../assets/projetos/consultatempo.png";
 import "../Css/Home.css";
 import "../Css/SobreMim.css";
 import "../Css/Tecnologias.css";
@@ -28,6 +29,30 @@ const projects: Project[] = [
       "Sistema web para geração de QR Codes de contatos, permitindo informar dados pessoais e gerar um código para compartilhamento.",
     image: imagemQrCode,
     url: "https://qrcode-contato.vercel.app/",
+    technologies: [
+      {
+        name: "React",
+        icon: "devicon-react-original",
+        colored: true,
+      },
+      {
+        name: "TypeScript",
+        icon: "devicon-typescript-plain",
+        colored: true,
+      },
+      {
+        name: "CSS",
+        icon: "devicon-css3-plain",
+        colored: true,
+      },
+    ],
+  },
+  {
+    name: "Como está o tempo agora?",
+    description:
+      "Sistema web para consultar o tempo através da busca pelo nome da cidade desejada.",
+    image: imagemConsultaTempo,
+    url: "https://consulta-tempo-atual.vercel.app/",
     technologies: [
       {
         name: "React",
